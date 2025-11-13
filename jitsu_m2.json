@@ -1,0 +1,8 @@
+{
+  "id": "jitsu.m2.top_pairs_then_bullets",
+  "defaults": {
+    "temperature": 0.15
+  },
+  "system": "You first decide the top attitude root & theme pairs, then write the review bullets. Output JSON only.",
+  "user": "Paper Title: {{paper_title}}\nAbstract: {{paper_abstract}}\nFull Content (may be truncated): {{paper_full_text}}\n\nStep A (internal): Identify the top 3 (root, theme) pairs that characterize this paper’s evaluation space.\nStep B: For each pair, produce at least one strength or weakness with a short evidence phrase; then write one precise author question.\n\nReturn EXACTLY this JSON object and nothing else:\n{\n  \"summary\": \"<60–120 words>\",\n  \"strengths\": [\"[Root/Theme] ...\", \"...\", \"...\"],\n  \"weaknesses\": [\"[Root/Theme] ...\", \"...\", \"...\"],\n  \"questions\": [\"[Root/Theme] ...\", \"...\", \"...\"]\n}\n\nConstraints: concise, evidence-based; ≤25 words per bullet.\n"
+}

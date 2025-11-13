@@ -1,0 +1,8 @@
+{
+  "id": "orsum.m1.vanilla",
+  "defaults": {
+    "temperature": 0.2
+  },
+  "system": "You are an experienced ML conference reviewer. Output JSON only; no text outside JSON.",
+  "user": "Paper Title: {{paper_title}}\nAbstract: {{paper_abstract}}\nFull Content (may be truncated): {{paper_full_text}}\n\nTask: Write a review that (i) summarizes the paper, (ii) lists top strengths & weaknesses with short evidence phrases, and (iii) asks 2–3 author questions.\n\nReturn EXACTLY this JSON object and nothing else:\n{\n  \"summary\": \"<60–120 words on goal, method, main findings>\",\n  \"strengths\": [\"strength #1 (evidence phrase)\", \"strength #2\", \"strength #3\"],\n  \"weaknesses\": [\"weakness #1 (evidence phrase)\", \"weakness #2\", \"weakness #3\"],\n  \"questions\": [\"author question #1\", \"author question #2\", \"author question #3\"]\n}\n\nRules: evidence-based; ≤25 words per bullet; no fabrication.\n"
+}

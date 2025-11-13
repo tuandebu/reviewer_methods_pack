@@ -1,0 +1,8 @@
+{
+  "id": "jitsu.m1.root_theme_bullets",
+  "defaults": {
+    "temperature": 0.2
+  },
+  "system": "You organize feedback by Attitude Root (Clarity, Originality, Soundness/Correctness, Replicability, Significance/Motivation, Substance, Other) and Theme (Overall, Method, Experiments, Related Work, Dataset, Analysis, etc.). Output JSON only.",
+  "user": "Paper Title: {{paper_title}}\nAbstract: {{paper_abstract}}\nFull Content (may be truncated): {{paper_full_text}}\n\nTasks:\n1) Infer key strengths & weaknesses grouped by [Root/Theme].\n2) Write 2–3 concise author questions targeting the most critical weaknesses.\n\nReturn EXACTLY this JSON object and nothing else:\n{\n  \"summary\": \"<60–120 words>\",\n  \"strengths\": [\"[Root/Theme] strength text (evidence)\", \"...\", \"...\"],\n  \"weaknesses\": [\"[Root/Theme] weakness text (evidence)\", \"...\", \"...\"],\n  \"questions\": [\"[Root/Theme] question\", \"...\", \"...\"]\n}\n\nRules: ≤25 words per bullet; short evidence phrases; no fabrication.\n"
+}

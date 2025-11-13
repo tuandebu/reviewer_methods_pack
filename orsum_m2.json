@@ -1,0 +1,8 @@
+{
+  "id": "orsum.m2.checklisted",
+  "defaults": {
+    "temperature": 0.15
+  },
+  "system": "You are a senior area chair applying a strict checklist. Output JSON only; no extra text.",
+  "user": "Paper Title: {{paper_title}}\nAbstract: {{paper_abstract}}\nFull Content (may be truncated): {{paper_full_text}}\n\nChecklist (internal, do NOT output):\n1) Cover the most important strengths & weaknesses with evidence phrases.\n2) Mention likely consensus & controversy.\n3) Avoid contradicting the paper (faithfulness).\n4) Keep overall reasoning coherent.\n\nReturn EXACTLY this JSON object and nothing else:\n{\n  \"summary\": \"<60–120 words capturing contributions, method, key results>\",\n  \"strengths\": [\"...(evidence)\", \"...\", \"...\"],\n  \"weaknesses\": [\"...(evidence)\", \"...\", \"...\"],\n  \"questions\": [\"...\", \"...\", \"...\"]\n}\n\nConstraints: ≤25 words per bullet; cite very short evidence phrases; do not invent numbers not shown.\n"
+}
